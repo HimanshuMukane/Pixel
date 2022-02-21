@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pixel</title>
+    <meta name="author" content="Himanshu Mukane">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://codepen.io/cconceicao/pen/PBQawy">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/sponser.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <meta name="description" content="See holiday deals in the folding feature cards">
+    <meta name="keyword" content="holidays, city, shopping, snow, ski, ski, sun, nature,hiking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d0f3648046d2aaca07bd0037b9e061a26c74a8a999b75672ad6a638cca641472.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
+
+</head>
+
+<body>
+    <!-- <div class="page-loader"></div> -->
+    <section id="home">
+        <div class="zoom-header">
+            <button class="zoomin btnzoom"><i class="fas fa-search-plus"></i></button>
+            <select id="sel" class="select btnzoom zoominit" onchange="handleChange()">
+          <option value=0.2>50%</option>
+          <option value=0.3>75%</option>
+          <option value=0.4>85%</option>
+          <option value=0.5>90%</option>
+          <option value=0.6 selected>100%</option>
+          <option value=0.8>120%</option>
+          <option value=1>150%</option>
+          <option value=1.5>175%</option>
+          <option value=1>reset</option>
+        </select>
+            <button class="zoomout btnzoom"><i class="fas fa-search-minus"></i></button>
+        </div>
+        <div id="container">
+
+            <div id="thumbs" class="target main">
+            </div>
+            <div id="page" style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    <section id="sponser">
+        <h1>Our<span> Sponsers</span></h1>
+        <hr>
+        <main class="main">
+
+            <section class="card-area">
+                <!-- Card: Ski -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                   <g>
+                                       <path d="M58.8,54.5L38.5,19.3c-0.4-0.6-1-1-1.7-1s-1.4,0.4-1.7,1L14.8,54.5c-0.4,0.6-0.4,1.4,0,2c0.4,0.6,1,1,1.7,1h40.6
+                                           c0.7,0,1.4-0.4,1.7-1C59.2,55.9,59.2,55.1,58.8,54.5z M36.8,24.3l5.8,10c-0.5-0.2-1.1-0.3-1.7-0.3c-2.5,0-3.7,1.5-4.6,2.5
+                                           c-0.7,0.9-1,1.1-1.5,1.1s-0.8-0.2-1.5-1.1c-0.6-0.7-1.3-1.5-2.4-2.1L36.8,24.3z M20,53.5l8.9-15.4c0.5,0,0.7,0.3,1.4,1.1
+                                           c0.8,1,2.1,2.5,4.6,2.5s3.7-1.5,4.6-2.5c0.7-0.9,1-1.1,1.5-1.1c0.5,0,0.8,0.2,1.5,1.1c0.8,1,2.1,2.5,4.5,2.5l6.8,11.8H20z"/>
+                                       <path d="M14.7,51.5c1.1,0,2-0.9,2-2s-0.9-2-2-2H6.4l9.1-15.7c0.6,0.6,1.5,1.3,2.9,1.3c1.8,0,2.8-1.2,3.3-1.8
+                                           c0.1-0.1,0.2-0.2,0.3-0.3c0.1,0.1,0.2,0.2,0.3,0.3c0.5,0.6,1.5,1.8,3.3,1.8c1.1,0,2-0.9,2-2c0-1.1-0.9-2-1.9-2
+                                           c-0.1-0.1-0.2-0.2-0.3-0.4c-0.5-0.6-1.5-1.8-3.3-1.8c-1.8,0-2.8,1.2-3.3,1.8c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1-0.1-0.2-0.2-0.3-0.3
+                                           c-0.1-0.2-0.3-0.4-0.5-0.6l5.7-9.9l3.8,6.6c0.6,1,1.8,1.3,2.7,0.7c1-0.6,1.3-1.8,0.7-2.7L25,13.2c-0.4-0.6-1-1-1.7-1
+                                           s-1.4,0.4-1.7,1l-8.4,14.5c-0.1,0.1-0.2,0.3-0.3,0.4L1.2,48.5c0,0,0,0.1,0,0.1c0,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2
+                                           c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2C1,50,1,50,1,50.1
+                                           c0,0.1,0,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1
+                                           c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0.1,0c0,0,0.1,0,0.1,0c0.1,0.1,0.2,0.1,0.3,0.1c0,0,0.1,0,0.1,0c0.1,0,0.3,0.1,0.5,0.1c0,0,0,0,0,0
+                                           c0,0,0,0,0,0c0,0,0,0,0,0H14.7z"/>
+                                       <path d="M40.7,12.3h3.1l-2.2,2.2c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l2.2-2.2v3.1
+                                           c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5v-3.1l2.2,2.2c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1l-2.2-2.2h3.1
+                                           c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5h-3.1l2.2-2.2c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L49,7.2V4
+                                           c0-0.8-0.7-1.5-1.5-1.5S46,3.2,46,4v3.1l-2.2-2.2c-0.6-0.6-1.5-0.6-2.1,0c-0.6,0.6-0.6,1.5,0,2.1l2.2,2.2h-3.1
+                                           c-0.8,0-1.5,0.7-1.5,1.5S39.9,12.3,40.7,12.3z"/>
+                                   </g>
+                                   </svg>
+                                    </div>
+
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            Ski trip
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Card: ski -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                   <path d="M57.2,28h-7.4c-0.4-4-2-7.7-4.4-10.6l3.2-3.2c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0l-3.2,3.2c-3-2.4-6.6-4-10.6-4.4V2.8
+                                       c0-1.1-0.9-2-2-2s-2,0.9-2,2v7.4c-4,0.4-7.7,2-10.6,4.4l-3.2-3.2c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8l3.2,3.2
+                                       c-2.4,3-4,6.6-4.4,10.6H2.8c-1.1,0-2,0.9-2,2s0.9,2,2,2h7.4c0.4,4,2,7.7,4.4,10.6l-3.2,3.2c-0.8,0.8-0.8,2,0,2.8
+                                       c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6l3.2-3.2c3,2.4,6.6,4,10.6,4.4v7.4c0,1.1,0.9,2,2,2s2-0.9,2-2v-7.4c4-0.4,7.7-2,10.6-4.4
+                                       l3.2,3.2c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8l-3.2-3.2c2.4-3,4-6.6,4.4-10.6h7.4c1.1,0,2-0.9,2-2
+                                       S58.3,28,57.2,28z M30,45.9c-8.8,0-15.9-7.2-15.9-15.9c0-8.8,7.2-15.9,15.9-15.9c8.8,0,15.9,7.2,15.9,15.9
+                                       C45.9,38.8,38.8,45.9,30,45.9z"/>
+                                   </svg>
+                                    </div>
+
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            ski time
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Card: ski -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                   <path d="M57,52.1c0-0.4-0.1-0.7-0.3-1.1l-6.3-10.8L32.4,9l2.3-4c0.6-1,0.2-2.2-0.7-2.7c-1-0.6-2.2-0.2-2.7,0.7L30,5.2L28.7,3
+                                       c-0.6-1-1.8-1.3-2.7-0.7c-1,0.6-1.3,1.8-0.7,2.7l2.3,4l-18,31.1L3.3,51C3.1,51.3,3,51.7,3,52.1c0,0.4,0.1,0.7,0.3,1
+                                       c0.4,0.6,1,1,1.7,1h50c0.7,0,1.4-0.4,1.7-1C56.9,52.8,57,52.4,57,52.1z M34.7,49.8C34.2,50,32.1,50,30,50s-4.2,0-4.7-0.2
+                                       c-0.2-0.5-0.2-2.1-0.2-3.6l0-4.3c0-2.7,2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9l0,4.3C34.9,47.7,34.9,49.3,34.7,49.8z M13.1,42.1L28,16.5
+                                       v16.7c-3.9,0.9-6.9,4.4-6.9,8.6l0,4.3c0,1.7,0,2.9,0.2,4H8.5L13.1,42.1z M38.7,50.1c0.2-1,0.2-2.3,0.2-4l0-4.3
+                                       c0-4.2-2.9-7.7-6.9-8.6V16.5l15,25.7l4.6,7.9H38.7z"/>
+                                   </svg>
+                                    </div>
+
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            ski trek
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </main>
+    </section>
+
+    <br><br><br><br><br><br>
+    <section id="about">
+        <h1>About<span> Us</span></h1>
+        <hr>
+        <div class="justify center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod ex blanditiis reiciendis voluptatibus inventore eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Laborum quod ex blanditiis reiciendis voluptatibus inventore eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Laborum quod ex blanditiis reiciendis voluptatibus inventore eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod ex
+                blanditiis reiciendis voluptatibus inventore eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod ex blanditiis reiciendis
+                voluptatibus inventore eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod ex blanditiis reiciendis voluptatibus inventore
+                eaque ullam vitae rerum, id quos! Accusamus vel doloribus illum ut, maxime nulla. Ipsum, ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod ex blanditiis reiciendis voluptatibus inventore eaque ullam vitae rerum,
+                id quos! </p>
+        </div>
+    </section>
+
+    <br><br><br><br><br><br>
+
+    <section id="counter">
+        <h1>Few <span>Days</span> Left</h1>
+        <div class="flipclock" id="flipclock-1"></div>
+    </section>
+
+    <section id="register">
+        <h1>Register <span style="color: rgb(25, 0, 255);">Now</span></h1>
+        <div class="frame">
+            <button class="custom-btn btn-3"><span>Register Now</span></button>
+        </div>
+
+        <section id="heighlight">
+        </section>
+
+        <section id="our-team" class="bgcolor-gray section-common-space">
+        </section>
+
+        <section id="testimonial-area">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-8 offset-md-2">
+                        <div class="section-heading text-center">
+                            <br><br>
+                            <br><br>
+                            <h2>What Do People Say<br><span style="color: #FF5E5E;"> About Us</span></h2>
+                            <br><br>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="testi-wrap">
+
+                    <div class="client-single active position-1" data-position="position-1">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-2" data-position="position-2">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-3" data-position="position-3">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-4" data-position="position-4">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-5" data-position="position-5">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-6" data-position="position-6">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                    <div class="client-single inactive position-7" data-position="position-7">
+                        <div class="client-img">
+                            <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" width="40px" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </h3>
+
+                        </div>
+                        <div class="client-info">
+
+                            <p>Manjay Gupta</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+        <script src="js/script.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/team.js"></script>
+        <script src="js/testimonial.js"></script>
+        <script src="js/about.js"></script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src='https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js'></script>
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+        <script src='https://code.jquery.com/jquery-1.11.1.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+        <script id="rendered-js">
+            (function(b, c) {
+                var $ = b.jQuery || b.Cowboy || (b.Cowboy = {}),
+                    a;
+                $.throttle = a = function(e, f, j, i) {
+                    var h, d = 0;
+                    if (typeof f !== "boolean") {
+                        i = j;
+                        j = f;
+                        f = c;
+                    }
+
+                    function g() {
+                        var o = this,
+                            m = +new Date() - d,
+                            n = arguments;
+
+                        function l() {
+                            d = +new Date();
+                            j.apply(o, n);
+                        }
+
+                        function k() {
+                            h = c;
+                        }
+                        if (i && !h) {
+                            l();
+                        }
+                        h && clearTimeout(h);
+                        if (i === c && m > e) {
+                            l();
+                        } else {
+                            if (f !== true) {
+                                h = setTimeout(i ? k : l, i === c ? e - m : e);
+                            }
+                        }
+                    }
+                    if ($.guid) {
+                        g.guid = j.guid = j.guid || $.guid++;
+                    }
+                    return g;
+                };
+                $.debounce = function(d, e, f) {
+                    return f === c ? a(d, e, false) : a(d, f, e !== false);
+                };
+            })(this);
+
+            var containerWidth, containerHeight, slideWidth, slideHeight, tb;
+            $(function() {
+
+                function calculate() {
+                    console.log("Calculate");
+                    containerWidth = $('#container').innerWidth();
+                    containerHeight = $('#container').innerHeight();
+
+                    tb = $('#thumbs');
+
+                    slideWidth = tb.outerWidth();
+                    slideHeight = tb.outerHeight();
+
+                    $('#container').mousemove(function(e) {
+                        tb.css({
+                            left: ((containerWidth - slideWidth) * (e.pageX / containerWidth).toFixed(5)).toFixed(1) + "px",
+                            top: ((containerHeight - slideHeight) * (e.pageY / containerHeight).toFixed(5)).toFixed(1) + "px"
+                        });
+
+                    });
+                }
+
+                $(window).resize($.debounce(0, function resizeHandler() {
+                    calculate();
+                }));
+
+                calculate();
+
+            });
+
+            var containerWidth, containerHeight, slideWidth, slideHeight, tb;
+            $(function() {
+
+                function calculate() {
+
+                }
+
+            });
+        </script>
+</body>
+
+</html>
