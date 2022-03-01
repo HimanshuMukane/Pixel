@@ -15,7 +15,7 @@
             min-height: 1000vh;
         }
         
-        .progress {
+        .city {
             height: 100vh;
             width: 300vw;
             background-image: url("svg/city.png");
@@ -24,11 +24,11 @@
             position: fixed;
             top: 0;
             left: -100vw;
-            animation: progress 1s linear;
+            animation: city 1s linear;
             z-index: -1;
         }
         
-        @keyframes progress {
+        @keyframes city {
             0% {
                 left: -100vw;
             }
@@ -84,8 +84,8 @@
         }
         
         .balloongreen {
-            height: 6vw;
-            width: 6vw;
+            height: 4vw;
+            width: 4vw;
             background-image: url("svg/balloongreen.svg");
             background-size: contain;
             position: fixed;
@@ -119,6 +119,50 @@
             }
             10.01% {
                 left: 65vw;
+                height: 0vw;
+            }
+            100% {
+                left: 0vw;
+                height: 0vw;
+            }
+        }
+        
+        .balloonmaroon {
+            height: 2vw;
+            width: 2vw;
+            background-image: url("svg/balloonmaroon.svg");
+            background-size: contain;
+            position: fixed;
+            top: 100vh;
+            left: 60vw;
+            background-repeat: no-repeat;
+            animation: balloonmaroon 1s linear;
+            z-index: 2;
+        }
+        
+        @keyframes balloonmaroon {
+            0% {
+                top: 100vh;
+                left: 60vw;
+            }
+            5% {
+                top: 100vh;
+                left: 60vw;
+            }
+            7% {
+                top: 50vh;
+                left: 60vw;
+            }
+            8% {
+                top: 50vh;
+                left: 60vw;
+            }
+            10% {
+                left: 50vw;
+                height: 6vw;
+            }
+            10.01% {
+                left: 50vw;
                 height: 0vw;
             }
             100% {
@@ -185,7 +229,7 @@
 </head>
 
 <body translate="no">
-    <div class="progress"></div>
+    <div class="city"></div>
     <div class="balloonred"></div>
     <div class="balloongreen"></div>
     <div class="balloonpurple"></div>
