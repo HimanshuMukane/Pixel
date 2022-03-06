@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pixel</title>
+    <meta name="author" content="Himanshu Mukane">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://codepen.io/cconceicao/pen/PBQawy">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/sponser.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <meta name="description" content="See holiday deals in the folding feature cards">
+    <meta name="keyword" content="holidays, city, shopping, snow, ski, ski, sun, nature,hiking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d0f3648046d2aaca07bd0037b9e061a26c74a8a999b75672ad6a638cca641472.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twpitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+
+<body>
+    <!-- <div class="page-loader"></div> -->
+    <section id="home">
+        <div class="zoom-header">
+            <button class="zoomin btnzoom"><i class="fas fa-search-plus"></i></button>
+            <select id="sel" class="select btnzoom zoominit" onchange="handleChange()">
+          <option value=0.2>50%</option>
+          <option value=0.3>75%</option>
+          <option value=0.4>85%</option>
+          <option value=0.5>90%</option>
+          <option value=0.6 selected>100%</option>
+          <option value=0.8>120%</option>
+          <option value=1>150%</option>
+          <option value=1.5>175%</option>
+          <option value=1>reset</option>
+        </select>
+            <button class="zoomout btnzoom"><i class="fas fa-search-minus"></i></button>
+        </div>
+        <div id="container">
+
+            <div id="thumbs" class="target main">
+            </div>
+            <div id="page" style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    <section id="sponser">
+        <h1>Our<span> Sponsers</span></h1>
+        <hr>
+        <div class="sponser">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #feb548;" class="course-card-img">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="main" alt="">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="layered" alt="">
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Sketch App Masterclass</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #4c76e0;" class="course-card-img">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="main" alt="">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="layered" alt="">
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Figma Design Masterclass</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #feb548;" class="course-card-img">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="main" alt="">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="layered" alt="">
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Sketch App Masterclass</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #4c76e0;" class="course-card-img">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="main" alt="">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="layered" alt="">
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Figma Design Masterclass</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #feb548;" class="course-card-img">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="main" alt="">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="layered" alt="">
+
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Sketch App Masterclass</h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #4c76e0;" class="course-card-img">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="main" alt="">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="layered" alt="">
+
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Figma Design Masterclass</h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #feb548;" class="course-card-img">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="main" alt="">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/sketch-2-logo-png-transparent.png" class="layered" alt="">
+
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Sketch App Masterclass</h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="course-card">
+                        <div style="background: #4c76e0;" class="course-card-img">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="main" alt="">
+                            <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/landscape/figma-1-logo.png" class="layered" alt="">
+
+                        </div>
+                        <div class="course-card-content">
+                            <h4>Figma Design Masterclass</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br>
+    <section id="about">
+        <h1>About<span> Us</span></h1>
+        <hr>
+        <div class="justify center">
+            <p>In this era of digital revolution where everything is at fingertips, people are racing to learn, access and master these technologies as much as possible thus it becomes a great opportunity for we students to develop our skills and commands
+                on it. Taking advantage of it we, the students of SAKEC are conducting the grand TECH CONCLAVE “PIXEL 2022” to provide the growing future techies of SAKEC a clear comprehension of the Digital World. The icing on the cake is, to enhance
+                your experience eminent and noteworthy speakers of technical and entrepreneurship field are going to influence you and contribute their knowledge to take your skills to the next level. They will put forth their experience and make you
+                fearless for your upcoming journey in this field. This event will focus on the technical aptitude development of students along with guiding them to make their right approach while making any choices in future technical fields. PIXEL is
+                ambitious to invite and accept any form of ideas context postulates and implement them in the most rightful way leading to betterment of future TECH ENTHUSIASTS.
+            </p>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <section id="counter">
+        <h1>Few <span>Days</span> Left</h1>
+        <div class="flipclock" id="flipclock-1"></div>
+    </section>
+
+    <section id="register">
+        <h1>Register <span style="color: rgb(25, 0, 255);">Now</span></h1>
+        <div class="frame">
+            <button class="custom-btn btn-3"><span>Register Now</span></button>
+        </div>
+    </section>
+
+    <section id="heighlight">
+        <br><br>
+        <div class="carousel slide" id="mySlider" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mySlider" data-slide-to="0" class="active"></li>
+                <li data-target="#mySlider" data-slide-to="1"></li>
+                <li data-target="#mySlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img id="carousel-img" src="https://wallpaperscraft.com/image/forest_lake_reflection_island_mist_97668_1920x1080.jpg">
+                    <div class="carousel-caption">
+                        <h2>Lonely River</h2>
+                        <p>Lorem ipsum meno dfa meso peu</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img id="carousel-img" src="https://wallpaperscraft.com/image/everest_mountain_sky_tops_96976_1920x1080.jpg">
+                    <div class="carousel-caption">
+                        <h2>Icy Mountain</h2>
+                        <p>Lorem ipsum meno dfa meso peu</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img id="carousel-img" src="https://hdqwalls.com/download/shawn-mendes-seventeen-2018-ot-1920x1080.jpg">
+                    <div class="carousel-caption">
+                        <h2>City</h2>
+                        <p>Lorem ipsum meno dfa meso peu</p>
+                    </div>
+                </div>
+            </div>
+            <a class="right carousel-control" href="#mySlider" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            <a class="left carousel-control" href="#mySlider" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="our-team" class="bgcolor-gray section-common-space">
+    </section>
+
+    <section id="testimonial-area">
+        <h2>What Do People Say<br><span style="color: #FF5E5E;"> About Us</span></h2>
+        <div class="container">
+            <div class="testi-wrap">
+
+                <div class="client-single active position-1" data-position="position-1">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-2" data-position="position-2">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-3" data-position="position-3">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-4" data-position="position-4">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-5" data-position="position-5">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-6" data-position="position-6">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-7" data-position="position-7">
+                    <div class="client-img">
+                        <img src="https://cdn.dribbble.com/users/2132253/avatars/small/1799e2c9badff08058551384763e284c.jpg?1568268299" width="40px" alt="">
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </h3>
+
+                    </div>
+                    <div class="client-info">
+
+                        <p>Manjay Gupta</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/team.js"></script>
+    <script src="js/testimonial.js"></script>
+    <script src="js/about.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js'></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+    <script src='https://code.jquery.com/jquery-1.11.1.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+
+    <script id="rendered-js">
+        (function(b, c) {
+            var $ = b.jQuery || b.Cowboy || (b.Cowboy = {}),
+                a;
+            $.throttle = a = function(e, f, j, i) {
+                var h, d = 0;
+                if (typeof f !== "boolean") {
+                    i = j;
+                    j = f;
+                    f = c;
+                }
+
+                function g() {
+                    var o = this,
+                        m = +new Date() - d,
+                        n = arguments;
+
+                    function l() {
+                        d = +new Date();
+                        j.apply(o, n);
+                    }
+
+                    function k() {
+                        h = c;
+                    }
+                    if (i && !h) {
+                        l();
+                    }
+                    h && clearTimeout(h);
+                    if (i === c && m > e) {
+                        l();
+                    } else {
+                        if (f !== true) {
+                            h = setTimeout(i ? k : l, i === c ? e - m : e);
+                        }
+                    }
+                }
+                if ($.guid) {
+                    g.guid = j.guid = j.guid || $.guid++;
+                }
+                return g;
+            };
+            $.debounce = function(d, e, f) {
+                return f === c ? a(d, e, false) : a(d, f, e !== false);
+            };
+        })(this);
+
+        var containerWidth, containerHeight, slideWidth, slideHeight, tb;
+        $(function() {
+
+            function calculate() {
+                console.log("Calculate");
+                containerWidth = $('#container').innerWidth();
+                containerHeight = $('#container').innerHeight();
+
+                tb = $('#thumbs');
+
+                slideWidth = tb.outerWidth();
+                slideHeight = tb.outerHeight();
+
+                $('#container').mousemove(function(e) {
+                    tb.css({
+                        left: ((containerWidth - slideWidth) * (e.pageX / containerWidth).toFixed(5)).toFixed(1) + "px",
+                        top: ((containerHeight - slideHeight) * (e.pageY / containerHeight).toFixed(5)).toFixed(1) + "px"
+                    });
+
+                });
+            }
+
+            $(window).resize($.debounce(0, function resizeHandler() {
+                calculate();
+            }));
+
+            calculate();
+
+        });
+
+        var containerWidth, containerHeight, slideWidth, slideHeight, tb;
+        $(function() {
+
+            function calculate() {
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>
