@@ -24,21 +24,100 @@
             /* Firefox */
         }
         
+        #rotate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: -5;
+        }
+        
+        .phone {
+            height: 50px;
+            width: 100px;
+            border: 3px solid white;
+            border-radius: 10px;
+            animation: rotate 1.5s ease-in-out infinite alternate;
+            /* display: none; */
+        }
+        
+        .message {
+            color: white;
+            font-size: 1em;
+            margin-top: 40px;
+            /* display: none; */
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg)
+            }
+            50% {
+                transform: rotate(-90deg)
+            }
+            100% {
+                transform: rotate(-90deg)
+            }
+        }
+        
         .song {
             z-index: 10;
             font-size: 3.1em;
         }
         
         #frame {
+            background-color: #313131;
             position: fixed;
             margin: auto;
             top: 0;
             right: 0;
             bottom: 0;
+            display: block;
             left: 0;
-            /* width: 100vw;
+            width: 100vw;
             height: 100vw;
-            border-radius: 3px; */
+            /* border-radius: 3px;  */
+        }
+        
+        @media only screen and (max-device-width: 812px) and (orientation: portrait) {
+            .phone,
+            .message {
+                display: block;
+            }
+            #frame {
+                display: none;
+            }
+            .city,
+            .balloonred,
+            .balloongreen,
+            .balloonpurplev,
+            .balloonmaroonv,
+            .balloonpink,
+            .head,
+            .bottom,
+            .cupboard,
+            .room,
+            .laptop,
+            .glitch,
+            .contact {
+                display: none;
+            }
+        }
+        
+        .city,
+        .balloonred,
+        .balloongreen,
+        .balloonpurplev,
+        .balloonmaroonv,
+        .balloonpink,
+        .head,
+        .bottom,
+        .cupboard,
+        .room,
+        .laptop,
+        .glitch,
+        .contact {
+            display: block;
         }
         
         #scroll {
@@ -932,6 +1011,13 @@
 </head>
 
 <body translate="no">
+    <div id="rotate">
+        <div class="phone">
+        </div>
+        <div class="message">
+            Please rotate your device!
+        </div>
+    </div>
     <div id="frame">
         <div class="city"></div>
 
