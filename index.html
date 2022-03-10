@@ -157,7 +157,7 @@
         .city {
             height: 100vh;
             width: 300vw;
-            background-image: url("svg/city.png");
+            background-image: url("svg/city.svg");
             background-size: contain;
             background-repeat: no-repeat;
             position: fixed;
@@ -699,7 +699,7 @@
         }
         
         .cupboard {
-            height: 100vw;
+            height: 50vw;
             background-image: url("svg/cupboard.svg");
             background-size: cover;
             position: fixed;
@@ -709,6 +709,11 @@
             animation: cupboard 1s linear;
             transform: scale(1);
             z-index: 5;
+            -webkit-animation-timing-function: linear;
+            /* Chrome, Safari, Opera */
+            animation-timing-function: linear;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
         }
         
         @keyframes cupboard {
@@ -716,22 +721,22 @@
                 height: 0vw;
                 opacity: 0;
                 top: 190vw;
-                left: -21vw;
+                left: 50vw;
             }
             29.99% {
                 opacity: 0;
             }
             30% {
                 opacity: 1;
-                height: 550vw;
-                width: 600vw;
+                height: 400vw;
+                width: 400vw;
                 /* transform: scale(5); */
                 top: -11vw;
-                left: -251vw;
+                left: -242vw;
             }
             32% {
                 /* transform: scale(1.3); */
-                height: 120vw;
+                height: 100vw;
                 width: 100vw;
                 top: 0vw;
                 left: 0vw;
@@ -740,7 +745,7 @@
                 /* transform: scale(1.3); */
                 top: -100vw;
                 left: 0vw;
-                height: 120vw;
+                height: 100vw;
             }
             48.01% {
                 height: 0vw;
@@ -767,6 +772,7 @@
             0% {
                 height: 0vw;
                 top: 5vw;
+                opacity: 1;
             }
             48% {
                 height: 0vw;
@@ -784,12 +790,12 @@
                 width: 100vw;
                 top: 5vw;
                 left: 0vw;
+                opacity: 1;
             }
             65% {
-                height: 300vw;
-                width: 300vw;
-                top: -35vw;
-                left: -100vw;
+                height: 100vw;
+                width: 100vw;
+                opacity: 0;
             }
             65.01% {
                 height: 0vw;
@@ -822,10 +828,10 @@
                 height: 0vw;
             }
             65% {
-                height: 300vw;
-                width: 300vw;
-                top: -85vw;
-                left: -50vw;
+                height: 100vw;
+                width: 100vw;
+                top: 0vw;
+                left: 0vw;
             }
             75% {
                 height: 100vw;
@@ -1024,8 +1030,8 @@
     <div id="frame">
         <div class="city"></div>
 
-        <input type="button" id="scroll" value="Scroll" onclick="page_scroll();">
-        <input type="button" id="stop_scroll" value="Stop Scroll" onclick="stop_scroll();">
+        <!-- <input type="button" id="scroll" value="Scroll" onclick="page_scroll();">
+        <input type="button" id="stop_scroll" value="Stop Scroll" onclick="stop_scroll();"> -->
 
         <div class="balloonred"></div>
         <div class="balloongreen"></div>
