@@ -23,29 +23,31 @@
             scrollbar-width: none;
             /* Firefox */
         }
-        /* #rotate {
+        
+        #rotate {
             position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             z-index: -5;
-        } */
-        /* .phone {
+        }
+        
+        .phone {
             height: 50px;
             width: 100px;
             margin-top: 40vh;
             border: 3px solid white;
             border-radius: 10px;
             animation: rotate ease-in-out infinite;
-             display: none; 
+            display: none;
         }
         
         .message {
             color: white;
             margin-top: 2vh;
             font-size: 1em;
-            display: none; 
+            display: none;
         }
         
         @keyframes rotate {
@@ -58,7 +60,7 @@
             100% {
                 transform: rotate(0deg)
             }
-        } */
+        }
         
         .song {
             z-index: 10;
@@ -591,6 +593,32 @@
                 opacity: 1;
             }
             60% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .text13 {
+            animation: text13 1s linear;
+            z-index: 8;
+        }
+        
+        @keyframes text13 {
+            0% {
+                opacity: 0;
+            }
+            58% {
+                opacity: 0;
+            }
+            59% {
+                opacity: 1;
+            }
+            64% {
+                opacity: 1;
+            }
+            65% {
                 opacity: 0;
             }
             100% {
