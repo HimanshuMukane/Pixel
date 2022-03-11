@@ -779,20 +779,24 @@
             background-image: url("svg/cupboard.svg");
             background-size: cover;
             position: fixed;
-            top: 0vh;
-            left: 0vw;
-            background-repeat: no-repeat;
-            animation: cupboard 1s linear;
-            transform: scale(1);
+            background-color: #ffffff;
             z-index: 5;
-            -webkit-animation-timing-function: linear;
-            /* Chrome, Safari, Opera */
-            animation-timing-function: linear;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
         }
         
-        @keyframes cupboard {
+        .loading::before {
+            content: "";
+            height: 20vw;
+            width: 70vw;
+            border-style: solid;
+            border-color: #0084ff;
+            background-color: #ffffff;
+            border-width: 20px;
+            position: fixed;
+            animation: loading 1s linear;
+            z-index: 5;
+        }
+        
+        @keyframes loading {
             0% {
                 height: 0vw;
                 opacity: 0;
@@ -903,17 +907,22 @@
             }
             64.99% {
                 height: 0vw;
+                opacity: 0;
             }
             65% {
                 height: 100vh;
                 width: 100vw;
-                top: 0vw;
+                top: -5vw;
                 left: 0vw;
+                opacity: 0;
+            }
+            66% {
+                opacity: 1;
             }
             80% {
                 height: 100vh;
                 width: 100vw;
-                top: 0vw;
+                top: -5vw;
                 left: 0vw;
             }
             80.01% {
@@ -1158,7 +1167,7 @@
         <div class="text14 bottom">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
         <div class="text15 bottom">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div> -->
 
-        <div class="cupboard"></div>
+        <div class="loading"></div>
         <div class="room"></div>
         <div class="laptop"></div>
         <div class="incomplete"></div>
