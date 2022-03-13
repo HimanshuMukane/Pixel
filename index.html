@@ -127,23 +127,26 @@
             top: 2vw;
             width: 25px;
             height: 25px;
-            padding: 10px 7px 10px 13px;
+            padding: 15px 3px 5px 17px;
             border-radius: 200px;
             background: white;
             color: #8a0808;
             font-size: 15px;
             z-index: 1000;
+            cursor: pointer;
         }
         
         #stop_scroll {
             position: fixed;
-            left: 85vw;
+            left: 95vw;
             top: 2vw;
-            width: 50px;
-            height: 50px;
+            width: 25px;
+            cursor: pointer;
+            height: 25px;
+            padding: 15px 5px 5px 15px;
             border-radius: 200px;
             background: white;
-            color: #868A08;
+            color: #8a0808;
             font-size: 16px;
             z-index: 1000;
         }
@@ -151,14 +154,14 @@
         body {
             padding: 0;
             margin: 0;
-            min-height: 6000vh;
+            min-height: 5000vh;
         }
         
         .city {
             height: 100vh;
             width: 300vw;
             background-image: url("svg/city.svg");
-            background-size: cover;
+            background-size: contain;
             background-position: 0% 90%;
             background-repeat: no-repeat;
             position: fixed;
@@ -895,7 +898,7 @@
             height: 100vh;
             width: 100vw;
             background-image: url("svg/room.svg");
-            background-size: cover;
+            background-size: contain;
             position: fixed;
             top: 0vh;
             left: 0vw;
@@ -939,7 +942,7 @@
             height: 100vh;
             width: 100vw;
             background-image: url("svg/laptop.svg");
-            background-size: cover;
+            background-size: contain;
             position: fixed;
             top: 0vh;
             left: 0vw;
@@ -968,13 +971,13 @@
             66% {
                 opacity: 1;
             }
-            80% {
+            88% {
                 height: 100vh;
                 width: 100vw;
                 top: -5vw;
                 left: 0vw;
             }
-            80.01% {
+            88.01% {
                 height: 0vh;
             }
             100% {
@@ -986,7 +989,7 @@
             height: 100vh;
             width: 100vw;
             background-image: url("svg/incomplete.svg");
-            background-size: cover;
+            background-size: contain;
             position: fixed;
             top: 0vh;
             left: 0vw;
@@ -1049,7 +1052,7 @@
             height: 100vh;
             width: 100vw;
             background-image: url("svg/glitch.svg");
-            background-size: cover;
+            background-size: contain;
             position: fixed;
             top: 0vh;
             left: 0vw;
@@ -1150,10 +1153,10 @@
                 opacity: 0;
                 font-size: 0vw;
             }
-            97.99% {
+            90.99% {
                 height: 0vh;
             }
-            98% {
+            91% {
                 height: 100vh;
                 transform: scale(1);
                 margin-top: 10vw;
@@ -1199,7 +1202,7 @@
         <div class="balloonpink"></div>
         <div class="head"> <img src="svg/logo.svg" ></div> 
         <div class="text1 bottom">Hey there, Please Scroll Down!!</div>
-        <div class="text2 bottom">Welcome to the Place of Godd Times </div>
+        <div class="text2 bottom">Welcome to the Place of Good Times </div>
         <div class="text3 bottom">Lets take a tour of our Pixel City!!</div>
         <div class="text4 bottom">Look there...</div>
         <div class="text5 bottom">There an event gonna happen!!</div>
@@ -1220,11 +1223,9 @@
         <div class="loading"></div>
         <div class="room"></div>
         <div class="laptop"></div>
-        <div class="incomplete"></div>
-        <div class="glitch"></div>
         <div class="contact">
             <h1>
-                <p>OH NO! SOMETHING WRONG.<br>
+                <p>For More Updates,<br>
                     <p><a href="https://www.shahandanchor.com/home/">CONTACT US!</a>
                         <br><br><br><br>
                         <span><i>-By Himanshu Mukane & Eashwari Nagarkar</i>
@@ -1246,12 +1247,33 @@
         function page_scroll() {
             $("html, body").animate({
                 scrollTop: $(document).height()
-            }, 200000);
+            }, 150000);
         }
 
         function stop_scroll() {
             $("html, body").stop();
         }
+
+
+        $(document).ready(function() {
+	// Users can skip the loading process if they want.
+	$('.skip').click(function() {
+		$('.overlay, body').addClass('loaded');
+	})
+	
+	// Will wait for everything on the page to load.
+	$(window).bind('load', function() {
+		$('.overlay, body').addClass('loaded');
+		setTimeout(function() {
+			$('.overlay').css({'display':'none'})
+		}, 2000)
+	});
+	
+	// Will remove overlay after 1min for users cannnot load properly.
+	setTimeout(function() {
+		$('.overlay, body').addClass('loaded');
+	}, 60000);
+})
     </script>
 
 </body>
