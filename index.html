@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>animation to scroll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <style>
         /* Hide scrollbar for Chrome, Safari and Opera */
@@ -23,15 +24,15 @@
             scrollbar-width: none;
             /* Firefox */
         }
-        /* #rotate {
+        #rotate {
             position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             z-index: -5;
-        } */
-        /* .phone {
+        }
+        .phone {
             height: 50px;
             width: 100px;
             margin-top: 40vh;
@@ -58,7 +59,7 @@
             100% {
                 transform: rotate(0deg)
             }
-        } */
+        }
         
         .song {
             z-index: 10;
@@ -94,7 +95,8 @@
         .contact {
             display: block;
         }
-        /* @media only screen and (max-device-width: 900px) and (orientation: portrait) {
+        
+        @media only screen and (max-device-width: 900px) and (orientation: portrait) {
             .phone,
             .message {
                 display: block;
@@ -117,28 +119,29 @@
             .contact {
                 display: none;
             }
-        } */
+        }
         
         #scroll {
             position: fixed;
-            left: 40vw;
+            left: 90vw;
             top: 2vw;
-            width: 100px;
-            height: 35px;
-            border: 1px solid #868A08;
+            width: 25px;
+            height: 25px;
+            padding: 10px 7px 10px 13px;
+            border-radius: 200px;
             background: white;
-            color: #868A08;
-            font-size: 16px;
+            color: #8a0808;
+            font-size: 15px;
             z-index: 1000;
         }
         
         #stop_scroll {
             position: fixed;
-            left: 60vw;
+            left: 85vw;
             top: 2vw;
-            width: 100px;
-            height: 35px;
-            border: 1px solid #868A08;
+            width: 50px;
+            height: 50px;
+            border-radius: 200px;
             background: white;
             color: #868A08;
             font-size: 16px;
@@ -239,16 +242,21 @@
             position: fixed;
             margin: auto;
             color: #000;
-            top: 0;
+            top: -70vh;
             right: 0;
             bottom: 0;
-            left: 0;
-            width: 15vw;
-            height: 15vw;
-            font-size: 3vw;
+            left: -25vw;
+            width: 5vw;
+            height: 5vw;
             text-align: center;
             animation: head 1s linear;
             z-index: 8;
+        }
+
+        .head img{
+            
+            width: 30vw;
+            height: 30vw;
         }
         
         @keyframes head {
@@ -1181,21 +1189,21 @@
     <div id="frame">
         <div class="city"></div>
 
-        <input type="button" id="scroll" value="Scroll" onclick="page_scroll();">
-        <input type="button" id="stop_scroll" value="Stop Scroll" onclick="stop_scroll();">
+        <div type="button" id="scroll" onclick="page_scroll();"><i class="fa fa-play"></i></div>
+        <div type="button" id="stop_scroll" onclick="stop_scroll();"><i class="fa fa-pause" aria-hidden="true"></i></div>
 
         <div class="balloonred"></div>
         <div class="balloongreen"></div>
         <div class="balloonpurple"></div>
         <div class="balloonmaroon"></div>
         <div class="balloonpink"></div>
-        <div class="head">a website to scroll down slowly.</div>
-        <div class="text1 bottom">HEY THERE!!</div>
-        <div class="text2 bottom">WELCOME TO THE PLACE OF GOOD TIMES </div>
-        <div class="text3 bottom">LETS TAKE A TOUR OF OUR PIXEL CITY !!</div>
-        <div class="text4 bottom">LOOK THERE ...</div>
-        <div class="text5 bottom">THERE AN EVENT GONNA HAPPEN!!</div>
-        <div class="text6 bottom">LETS TAKE A GLIMPES OF IT.</div>
+        <div class="head"> <img src="svg/logo.svg" ></div> 
+        <div class="text1 bottom">Hey there, Please Scroll Down!!</div>
+        <div class="text2 bottom">Welcome to the Place of Godd Times </div>
+        <div class="text3 bottom">Lets take a tour of our Pixel City!!</div>
+        <div class="text4 bottom">Look there...</div>
+        <div class="text5 bottom">There an event gonna happen!!</div>
+        <div class="text6 bottom">Lets take a glimpes of it.</div>
         <div class="text7 bottom">The Wait is almost over!!</div>
         <div class="text7a bottom">The Most Spectacular Tech Conclave of SAKEC.</div>
         <div class="text8 bottom">When you need to innovate, you need collaboration.</div>
