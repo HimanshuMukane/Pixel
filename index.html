@@ -71,7 +71,7 @@
         }
         
         #frame {
-            background-color: #313131;
+            background-color: #353535;
             position: fixed;
             margin: auto;
             top: 0;
@@ -943,12 +943,12 @@
         }
         
         .laptop {
-            height: 100vh;
+            height: 200vh;
             width: 100vw;
             background-image: url("svg/laptop.svg");
             background-size: contain;
             position: fixed;
-            top: 0vh;
+            margin-left: 8vw;
             left: 0vw;
             background-repeat: no-repeat;
             animation: laptop 1s linear;
@@ -959,7 +959,6 @@
         @keyframes laptop {
             0% {
                 height: 0vh;
-                top: 3vw;
             }
             64.99% {
                 height: 0vh;
@@ -1154,6 +1153,12 @@
         function stop_scroll() {
             $("html, body").stop();
         }
+
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                $("html, body").stop();
+            }
+        };
 
 
         $(document).ready(function() {
